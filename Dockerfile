@@ -5,9 +5,8 @@ RUN apt-get update && \
 RUN apt-get -y install git
 ENV PYTHONUNBUFFERED=1
 ENV SHELL=/bin/bash
-WORKDIR $HOME/djangoApp1
+WORKDIR /Users/bharathsubramanyam/djangoApp1
 RUN pip install --upgrade pip 
-COPY ./requirements.txt $HOME/djangoApp1
+COPY ./requirements.txt /Users/bharathsubramanyam/djangoApp1
 RUN pip install -r requirements.txt
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
-COPY . $HOME/djangoApp1/
