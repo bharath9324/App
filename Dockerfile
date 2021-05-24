@@ -9,4 +9,5 @@ WORKDIR /djangoApp1
 RUN pip install --upgrade pip 
 COPY ./requirements.txt /djangoApp1
 RUN pip install -r requirements.txt
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 COPY . /djangoApp1/
