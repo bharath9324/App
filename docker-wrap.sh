@@ -4,7 +4,7 @@ if [ "$1" == "build" ]; then
 elif [ "$1" == "prune" ]; then
 	docker system prune -a
 elif [ "$1" == "run" ]; then
-	docker run -it -d -p 8000:8000 -v ~/.gitconfig:/etc/gitconfig --name dev django-image /bin/bash git config --list
+	docker run -it -d -p 8000:8000 -v ~/.gitconfig:/etc/gitconfig --name dev django-image /bin/bash
 elif [ "$1" == "attach"	 ]; then
 	docker attach dev
 else
