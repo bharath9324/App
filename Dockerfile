@@ -19,4 +19,5 @@ WORKDIR /Users/bharathsubramanyam/Development
 RUN pip install --upgrade pip 
 COPY ./requirements.txt /Users/bharathsubramanyam/Development
 RUN pip install -r requirements.txt
+RUN npm install
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
