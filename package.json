@@ -4,7 +4,8 @@
   "description": "A django app in a docker container",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack --mode development ./chatBot/frontend/src/index.js --output-path ./chatBot/frontend/static/frontend/main.js",
+    "build": "webpack --mode production ./chatBot/frontend/src/index.js --output-path ./chatBot/frontend/static/frontend/main.js"
   },
   "repository": {
     "type": "git",
